@@ -84,7 +84,7 @@ function membuatBuku(objectBook) {
   if (objectBook.keteranganSelesai) {
     const tombolUndo = document.createElement('button');
     tombolUndo.setAttribute('data-testid', 'bookItemIsCompleteButton');
-    tombolUndo.innerText = 'Belum Selesai';
+    tombolUndo.innerText = 'Belum Selesai diBaca';
     tombolUndo.addEventListener('click', function () {
       membatalkanSelesai(objectBook.id);
     });
@@ -104,7 +104,14 @@ function membuatBuku(objectBook) {
     tombolSelesai.addEventListener('click', function () {
       menyelesaikanBuku(objectBook.id);
     });
-    container.append(tombolSelesai);
+
+    const tombolHapus = document.createElement('button');
+    tombolHapus.setAttribute('data-testid', 'bookItemDeleteButton');
+    tombolHapus.innerText = 'Hapus Buku';
+    tombolHapus.addEventListener('click', function () {
+      menghapusBuku(objectBook.id);
+    });
+    container.append(tombolSelesai, tombolHapus);
   }
 
   return container;
