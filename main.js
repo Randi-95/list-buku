@@ -40,7 +40,13 @@ function membuatID() {
 }
 
 function membuatObject(id, judul, penulis, tahun, keteranganSelesai) {
-  return { id, judul, penulis, tahun, keteranganSelesai };
+  return {
+    id,
+    title: judul,
+    author: penulis,
+    year: tahun,
+    isComplete: keteranganSelesai
+  }
 }
 
 let bookIsi = [];
@@ -68,15 +74,15 @@ document.addEventListener(RENDER_EVENT, function () {
 function membuatBuku(objectBook) {
   const judulBuku = document.createElement('h3');
   judulBuku.setAttribute('data-testid', 'bookItemTitle');
-  judulBuku.innerText = objectBook.judul;
+  judulBuku.innerText = objectBook.title;
 
   const penulisBuku = document.createElement('p');
   penulisBuku.setAttribute('data-testid', 'bookItemAuthor');
-  penulisBuku.innerText = objectBook.penulis;
+  penulisBuku.innerText = objectBook.author;
 
   const tahunBuku = document.createElement('p');
   tahunBuku.setAttribute('data-testid', 'bookItemYear');
-  tahunBuku.innerText = objectBook.tahun;
+  tahunBuku.innerText = objectBook.year;
 
   const container = document.createElement('div');
   container.setAttribute('data-testid', 'bookItem');
