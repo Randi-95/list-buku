@@ -31,6 +31,8 @@ function isiBook() {
   
   bookIsi.push(objectBook);
   document.dispatchEvent(new Event('RENDER_EVENT'));
+
+  saveData()
 }
 
 function membuatID() {
