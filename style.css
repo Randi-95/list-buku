@@ -1,0 +1,145 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 5px;
+  }
+  
+  /* Form Styles */
+  form div {
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input:focus{
+    border: 1px solid #4a90e2;
+    outline: none;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #357ab7;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #357ab7;
+  }
+
+  .button-complete{
+    display: flex;
+    align-items: center;
+  }
+
+  .button-complete input{
+    width: 20px;
+  }
+
+
+  #incompleteBookList, #completeBookList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  [data-testid="bookItem"] {
+    background: #fff;
+    padding: 15px;
+    border-left: 5px solid #4a90e2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  [data-testid="bookItem"] h3 {
+    margin: 0 0 10px;
+  }
+  
+  [data-testid="bookItem"] p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  [data-testid="bookItem"] div {
+    display: flex;
+    gap: 10px;
+  }
+  
+  [data-testid="bookItem"] button {
+    flex: 1;
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+  
+  [data-testid="bookItemIsCompleteButton"] {
+    background-color: #28a745;
+    margin-right: 10px;
+  }
+  
+  [data-testid="bookItemIsCompleteButton"]:hover {
+    background-color: #218838;
+  }
+  
+  [data-testid="bookItemDeleteButton"] {
+    background-color: #dc3545;
+  }
+  
+  [data-testid="bookItemDeleteButton"]:hover {
+    background-color: #c82333;
+  }
+  
+  [data-testid="bookItemEditButton"] {
+    background-color: #ffc107;
+    color: #333;
+  }
+  
+  [data-testid="bookItemEditButton"]:hover {
+    background-color: #e0a800;
+  }
+  
